@@ -84,6 +84,7 @@ def main():
         taken: 'background-color: lightblue',
         weekend: 'background-color: lightgrey',
     }
+    col_width = 14
 
     with pandas.ExcelWriter(config['output'], engine='xlsxwriter') as writer:
         for month, month_data in data.items():
@@ -108,6 +109,7 @@ def main():
                 x] if x in colorization else '').to_excel(writer,
                                                           sheet_name=month,
                                                           index=False)
+            writer.sheets[month].set_column(1, len(to_write) - 1, col_width)
 
 
 if __name__ == '__main__':
