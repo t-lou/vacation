@@ -1,12 +1,14 @@
 countries:
  - code: germany
    display: Holiday Germany
+ - code: portugal
+   display: Holiday Portugal
  - code: china
    display: Holiday China
 
 persons:
  - Max Mustermann
 
-year: 2022
+year: 2025
 
 output: Vacation_2022.xlsx

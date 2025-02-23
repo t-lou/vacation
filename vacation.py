@@ -74,9 +74,6 @@ def main():
 
         date += one_day
 
-    # https://stackoverflow.com/questions/36694313/pandas-xlsxwriter-format-header
-    pandas.io.formats.excel.ExcelFormatter.header_style = None
-
     taken = '  '
     weekend = ' '
     free = ''
