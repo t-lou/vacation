@@ -97,7 +97,7 @@ def main():
             to_write.update(
                 {person: [free] * len(month_data) for person in config["persons"]}
             )
-            pandas.DataFrame(to_write).style.applymap(
+            pandas.DataFrame(to_write).style.map(
                 lambda x: colorization[x] if x in colorization else ""
             ).to_excel(writer, sheet_name=month, index=False)
             writer.sheets[month].set_column(1, len(to_write) - 1, col_width)
