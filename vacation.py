@@ -34,7 +34,7 @@ def load_config() -> dict:
     """
     expected = {"countries": list, "persons": list, "year": int, "output": str}
     config = yaml.safe_load(open("config.yml"))
-    assert all(it in config and type(config[it]) == expected[it] for it in expected)
+    assert all(it in config and type(config[it]) is expected[it] for it in expected)
     return config
 
 
@@ -52,7 +52,6 @@ def main():
     date = datetime.datetime(year=this_year, month=1, day=1)
     one_day = datetime.timedelta(days=1)
 
-    this_month = 1
     while date.year == this_year:
         str_month = date.strftime("%Y-%m")
         str_day = date.strftime("%m-%d")
