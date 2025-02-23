@@ -75,7 +75,7 @@ def main():
         taken: "background-color: lightblue",
         weekend: "background-color: lightgrey",
     }
-    col_width = 14
+    col_width = 20
 
     with pandas.ExcelWriter(config["output"], engine="xlsxwriter") as writer:
         for month, month_data in data.items():
