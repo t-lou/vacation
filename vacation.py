@@ -84,7 +84,7 @@ def main():
             to_write = {"Date": dates}
             to_write.update(
                 {
-                    country_display: [
+                    country_display.replace("Holiday ", ""): [
                         taken if country_code in month_data[date] else free
                         for date in dates
                     ]
